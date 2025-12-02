@@ -12,6 +12,8 @@ setup(
         ('share/' + package_name, ['package.xml', 'README.md']),
         ('share/' + package_name + '/launch', ['launch/fleet_takeoff.launch.py']),
         ('share/' + package_name + '/launch', ['launch/fleet_circle.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/fleet_lissajous.launch.py']), 
+        ('share/' + package_name + '/launch', ['launch/fleet_lissajous_takeoff.launch.py']),             
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,6 +25,8 @@ setup(
         'console_scripts': [
             'cf_fleet_takeoff = cf_fleet_takeoff.takeoff_node:main',
             'cf_fleet_circle  = cf_fleet_takeoff.circle_node:main',
+            'cf_fleet_lissajous = cf_fleet_takeoff.lissajous_node:main',
+            'cf_fleet_lissajous_takeoff= cf_fleet_takeoff.lissajous_takeoff_node:main',
         ],
     },
 )
